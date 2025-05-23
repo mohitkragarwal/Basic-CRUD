@@ -15,6 +15,12 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
+    @GetMapping("/home")
+    public String home()
+    {
+        return "Basic CRUD Application";
+    }
+
     @PostMapping("create")
     public ResponseEntity<String> addTask(@RequestBody Tasks task)
     {
